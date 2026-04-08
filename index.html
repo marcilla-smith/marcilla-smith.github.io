@@ -20,6 +20,13 @@
 
         .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
 
+        /* ── Shared wordmark ── */
+        .pais-wordmark { font-family: 'Nunito', sans-serif; font-weight: 900; display: inline; }
+        .pais-p { color: #4285F4; }
+        .pais-a { color: #EA4335; }
+        .pais-i { color: #FBBC04; }
+        .pais-s { color: #34A853; }
+
         /* ── Header ── */
         header {
             padding: 1.25rem 0;
@@ -38,40 +45,23 @@
             gap: 1rem;
         }
 
-        .logo-section {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            text-decoration: none;
-        }
-
+        .logo-section { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
         .logo-svg { width: 48px; height: 48px; }
 
         .logo-text .company-name {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: #1e293b;
-            letter-spacing: 0.02em;
-            display: block;
+            font-size: 1.1rem; font-weight: 700; color: #1e293b;
+            letter-spacing: 0.02em; display: block;
         }
-
         .logo-text .tagline {
-            font-size: 0.7rem;
-            color: #64748b;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            display: block;
+            font-size: 0.7rem; color: #64748b;
+            letter-spacing: 0.1em; text-transform: uppercase; display: block;
         }
 
         nav a {
-            margin-left: 2rem;
-            text-decoration: none;
-            color: #475569;
-            font-size: 0.9rem;
-            font-weight: 500;
+            margin-left: 2rem; text-decoration: none;
+            color: #475569; font-size: 0.9rem; font-weight: 500;
             transition: color 0.2s;
         }
-
         nav a:hover { color: #2563eb; }
 
         /* ── Hero ── */
@@ -82,16 +72,15 @@
             position: relative;
         }
 
-        /* Light overlay so text stays readable over the banner art */
         .hero::before {
             content: '';
             position: absolute;
             inset: 0;
             background: linear-gradient(
                 to right,
-                rgba(248,250,252,0.72) 0%,
-                rgba(224,242,254,0.55) 60%,
-                rgba(224,242,254,0.45) 100%
+                rgba(248,250,252,0.75) 0%,
+                rgba(224,242,254,0.58) 60%,
+                rgba(224,242,254,0.48) 100%
             );
         }
 
@@ -99,129 +88,72 @@
 
         .hero-eyebrow {
             display: inline-block;
-            background: #dbeafe;
-            color: #1d4ed8;
-            font-size: 0.8rem;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            padding: 0.35rem 1rem;
-            border-radius: 99px;
+            background: #dbeafe; color: #1d4ed8;
+            font-size: 0.8rem; font-weight: 600;
+            letter-spacing: 0.08em; text-transform: uppercase;
+            padding: 0.35rem 1rem; border-radius: 99px;
             margin-bottom: 1.5rem;
         }
 
         .hero h1 {
-            font-size: 3.25rem;
-            font-weight: 800;
-            color: #1e293b;
-            margin-bottom: 1.5rem;
-            line-height: 1.15;
+            font-size: 3.25rem; font-weight: 800;
+            color: #1e293b; margin-bottom: 1.5rem; line-height: 1.15;
         }
-
-        /* Pais wordmark in official Google hues, Nunito (open-source Google font) */
-        .pais-wordmark {
-            font-family: 'Nunito', sans-serif;
-            font-weight: 900;
-            display: inline;
-        }
-
-        .pais-p { color: #4285F4; }
-        .pais-a { color: #EA4335; }
-        .pais-i { color: #FBBC04; }
-        .pais-s { color: #34A853; }
 
         .hero p {
-            font-size: 1.2rem;
-            color: #1e293b;
+            font-size: 1.2rem; color: #1e293b;
             margin-bottom: 2.5rem;
-            max-width: 660px;
-            margin-left: auto;
-            margin-right: auto;
-            text-shadow: 0 1px 3px rgba(255,255,255,0.6);
+            max-width: 660px; margin-left: auto; margin-right: auto;
+            text-shadow: 0 1px 3px rgba(255,255,255,0.5);
         }
 
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
         .btn {
-            display: inline-block;
-            padding: 0.875rem 2rem;
-            font-size: 1rem;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: all 0.25s ease;
-            cursor: pointer;
-            border: none;
+            display: inline-block; padding: 0.875rem 2rem;
+            font-size: 1rem; font-weight: 600;
+            text-decoration: none; border-radius: 8px;
+            transition: all 0.25s ease; cursor: pointer; border: none;
         }
 
         .btn-primary {
-            background: #2563eb;
-            color: white;
+            background: #2563eb; color: white;
             box-shadow: 0 2px 8px rgba(37,99,235,0.35);
         }
-
         .btn-primary:hover {
-            background: #1d4ed8;
-            transform: translateY(-2px);
+            background: #1d4ed8; transform: translateY(-2px);
             box-shadow: 0 4px 16px rgba(37,99,235,0.45);
         }
 
         .btn-secondary {
             background: rgba(255,255,255,0.9);
-            color: #2563eb;
-            border: 2px solid #2563eb;
+            color: #2563eb; border: 2px solid #2563eb;
         }
-
         .btn-secondary:hover { background: #eff6ff; }
 
         /* ── Shared section styles ── */
         .section-label {
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: #0891b2;
-            margin-bottom: 0.75rem;
-            text-align: center;
+            font-size: 0.75rem; font-weight: 700;
+            letter-spacing: 0.12em; text-transform: uppercase;
+            color: #0891b2; margin-bottom: 0.75rem; text-align: center;
         }
 
         .section-title {
-            font-size: 2.1rem;
-            font-weight: 700;
-            color: #1e293b;
-            text-align: center;
-            margin-bottom: 0.85rem;
-            line-height: 1.25;
+            font-size: 2.1rem; font-weight: 700; color: #1e293b;
+            text-align: center; margin-bottom: 0.85rem; line-height: 1.25;
         }
 
         .section-subtitle {
-            text-align: center;
-            font-size: 1.05rem;
-            color: #64748b;
-            max-width: 620px;
-            margin: 0 auto 3rem;
+            text-align: center; font-size: 1.05rem; color: #64748b;
+            max-width: 620px; margin: 0 auto 3rem;
         }
 
         /* ── Problem / Solution ── */
         .problem { padding: 5rem 0; }
 
-        .two-col {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
 
-        .card {
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid #e2e8f0;
-        }
-
+        .card { padding: 2rem; border-radius: 12px; border: 1px solid #e2e8f0; }
         .card-problem { background: #fff7ed; border-color: #fed7aa; }
         .card-solution { background: #f0fdf4; border-color: #bbf7d0; }
 
@@ -233,62 +165,49 @@
         /* ── Product ── */
         .product { padding: 5rem 0; background: #f8fafc; }
 
+        .product-title-wordmark {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 900;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            line-height: 1;
+            display: block;
+        }
+
         .product-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-            margin-top: 3rem;
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 3rem; align-items: center; margin-top: 3rem;
         }
 
         .product-text h3 {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: #1e293b;
-            margin-bottom: 1rem;
+            font-size: 1.6rem; font-weight: 700;
+            color: #1e293b; margin-bottom: 1rem;
         }
 
         .product-text p {
-            color: #475569;
-            font-size: 1rem;
-            line-height: 1.8;
-            margin-bottom: 1.1rem;
+            color: #475569; font-size: 1rem;
+            line-height: 1.8; margin-bottom: 1.1rem;
         }
 
-        .input-types {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin: 1.25rem 0;
-        }
+        .input-types { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.25rem 0; }
 
         .input-chip {
-            background: #dbeafe;
-            color: #1e40af;
-            padding: 0.3rem 0.8rem;
-            border-radius: 99px;
-            font-size: 0.875rem;
-            font-weight: 500;
+            background: #dbeafe; color: #1e40af;
+            padding: 0.3rem 0.8rem; border-radius: 99px;
+            font-size: 0.875rem; font-weight: 500;
         }
 
         .stage-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: #fef3c7;
-            color: #92400e;
-            border: 1px solid #fcd34d;
-            border-radius: 8px;
-            padding: 0.65rem 1.1rem;
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-top: 1.25rem;
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            background: #fef3c7; color: #92400e;
+            border: 1px solid #fcd34d; border-radius: 8px;
+            padding: 0.65rem 1.1rem; font-size: 0.9rem;
+            font-weight: 600; margin-top: 1.25rem;
         }
 
         .stage-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
+            width: 8px; height: 8px; border-radius: 50%;
             background: #f59e0b;
             animation: pulse-dot 2s ease-in-out infinite;
             flex-shrink: 0;
@@ -301,264 +220,182 @@
 
         /* Chat mockup */
         .product-visual {
-            background: #1e293b;
-            border-radius: 16px;
+            background: #1e293b; border-radius: 16px;
             padding: 1.75rem;
             box-shadow: 0 20px 60px rgba(0,0,0,0.2);
         }
 
         .chat-header {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 1.25rem;
-            padding-bottom: 1rem;
+            display: flex; align-items: center; gap: 0.75rem;
+            margin-bottom: 1.25rem; padding-bottom: 1rem;
             border-bottom: 1px solid #334155;
         }
 
         .chat-logo-wrap { width: 32px; height: 32px; }
 
-        .chat-title {
-            font-size: 1rem;
-            font-weight: 900;
+        .chat-name {
             font-family: 'Nunito', sans-serif;
-            display: inline;
+            font-weight: 900; font-size: 1rem;
         }
 
         .chat-status { font-size: 0.7rem; color: #22c55e; display: block; }
 
         .chat-bubble {
-            border-radius: 12px;
-            padding: 0.8rem 1rem;
-            margin-bottom: 0.65rem;
-            font-size: 0.875rem;
-            line-height: 1.5;
-            max-width: 92%;
+            border-radius: 12px; padding: 0.8rem 1rem;
+            margin-bottom: 0.65rem; font-size: 0.875rem;
+            line-height: 1.5; max-width: 92%;
         }
 
         .chat-user {
-            background: #2563eb;
-            color: white;
-            margin-left: auto;
-            border-bottom-right-radius: 4px;
+            background: #2563eb; color: white;
+            margin-left: auto; border-bottom-right-radius: 4px;
         }
 
         .chat-pais {
-            background: #1e3a5f;
-            color: #e2e8f0;
+            background: #1e3a5f; color: #e2e8f0;
             border-bottom-left-radius: 4px;
         }
 
         .event-card {
-            background: #0f2942;
-            border: 1px solid #1d4ed8;
-            border-radius: 8px;
-            padding: 0.75rem 0.9rem;
-            margin-top: 0.5rem;
+            background: #0f2942; border: 1px solid #1d4ed8;
+            border-radius: 8px; padding: 0.75rem 0.9rem; margin-top: 0.5rem;
         }
 
         .event-card-label {
-            color: #93c5fd;
-            font-size: 0.72rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.07em;
-            margin-bottom: 0.3rem;
+            color: #93c5fd; font-size: 0.72rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 0.3rem;
         }
 
         .event-card-title { color: #f1f5f9; font-size: 0.9rem; font-weight: 600; }
         .event-card-meta { color: #94a3b8; font-size: 0.78rem; margin-top: 0.2rem; }
 
         /* ── Tech stack ── */
-        .stack {
-            padding: 2.75rem 0;
-            background: #000000;
-        }
+        .stack { padding: 2.75rem 0 2.5rem; background: #000000; }
 
         .stack-label {
-            text-align: center;
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: #64748b;
-            margin-bottom: 1.75rem;
+            text-align: center; font-size: 0.8rem; font-weight: 700;
+            letter-spacing: 0.12em; text-transform: uppercase;
+            color: #ffffff; margin-bottom: 1.75rem;
         }
 
-        .stack-logos {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .logos-strip-wrap {
+            display: flex; justify-content: center; align-items: center;
         }
 
-        /* Single combined logos image on black bg */
         .logos-strip {
-            max-width: 640px;
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
+            max-width: 680px; width: 100%; height: auto; display: block;
+        }
+
+        .stack-names {
+            display: flex; justify-content: center;
+            gap: 0; margin-top: 1rem; flex-wrap: wrap;
+            max-width: 680px; margin-left: auto; margin-right: auto;
+        }
+
+        .stack-name {
+            flex: 1; min-width: 0;
+            font-size: 0.78rem; font-weight: 600;
+            color: #94a3b8; letter-spacing: 0.04em;
+            text-align: center; padding: 0 0.5rem;
         }
 
         /* ── Team ── */
         .team { padding: 5rem 0; background: #f8fafc; }
 
         .team-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-top: 3rem;
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 2rem; margin-top: 3rem;
         }
 
         .team-card {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
+            background: white; border-radius: 12px; padding: 2rem;
             border: 1px solid #e2e8f0;
             box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
 
         .team-card-top {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
+            display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;
         }
 
         .team-headshot {
-            width: 72px;
-            height: 72px;
-            border-radius: 50%;
-            object-fit: cover;
-            object-position: center top;
-            flex-shrink: 0;
-            border: 2px solid #e2e8f0;
+            width: 72px; height: 72px; border-radius: 50%;
+            object-fit: cover; object-position: center top;
+            flex-shrink: 0; border: 2px solid #e2e8f0;
         }
 
         .team-card-identity { flex: 1; min-width: 0; }
 
         .team-name-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 0.5rem;
-            flex-wrap: wrap;
+            display: flex; align-items: center;
+            justify-content: space-between; gap: 0.5rem; flex-wrap: wrap;
         }
 
-        .team-card h3 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #1e293b;
-        }
+        .team-card h3 { font-size: 1.25rem; font-weight: 700; color: #1e293b; }
 
         .linkedin-link {
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-            text-decoration: none;
-            color: #0077b5;
-            font-size: 0.78rem;
-            font-weight: 600;
-            transition: opacity 0.2s;
-            flex-shrink: 0;
+            display: flex; align-items: center; gap: 0.3rem;
+            text-decoration: none; color: #0077b5;
+            font-size: 0.78rem; font-weight: 600;
+            transition: opacity 0.2s; flex-shrink: 0;
         }
-
         .linkedin-link:hover { opacity: 0.7; }
 
-        /* LinkedIn icon: white bg needs a containing box */
         .linkedin-icon-wrap {
-            width: 20px;
-            height: 20px;
-            border-radius: 4px;
-            overflow: hidden;
-            background: #ffffff;
-            flex-shrink: 0;
+            width: 20px; height: 20px; border-radius: 3px;
+            overflow: hidden; background: #ffffff; flex-shrink: 0;
         }
-
-        .linkedin-icon-wrap img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
+        .linkedin-icon-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
         .team-role {
-            color: #0891b2;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-top: 0.15rem;
+            color: #0891b2; font-size: 0.875rem;
+            font-weight: 600; margin-top: 0.15rem;
         }
 
         .team-card p {
-            color: #475569;
-            font-size: 0.95rem;
-            line-height: 1.75;
-            margin-bottom: 0.9rem;
+            color: #475569; font-size: 0.95rem;
+            line-height: 1.75; margin-bottom: 0.9rem;
         }
 
-        .credentials {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.4rem;
-            margin-top: 0.75rem;
-        }
+        .credentials { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.75rem; }
 
         .cred-tag {
-            background: #f1f5f9;
-            color: #475569;
-            border: 1px solid #e2e8f0;
-            border-radius: 6px;
-            padding: 0.2rem 0.6rem;
-            font-size: 0.775rem;
-            font-weight: 500;
+            background: #f1f5f9; color: #475569;
+            border: 1px solid #e2e8f0; border-radius: 6px;
+            padding: 0.2rem 0.6rem; font-size: 0.775rem; font-weight: 500;
         }
 
         /* ── Contact ── */
         .contact {
-            padding: 5rem 0;
-            background: #1e293b;
-            color: white;
-            text-align: center;
+            padding: 5rem 0; background: #1e293b;
+            color: white; text-align: center;
         }
 
         .contact h2 { font-size: 2.1rem; font-weight: 700; margin-bottom: 1rem; }
 
         .contact p {
-            font-size: 1.05rem;
-            margin-bottom: 2rem;
-            opacity: 0.8;
-            max-width: 520px;
-            margin-left: auto;
-            margin-right: auto;
+            font-size: 1.05rem; margin-bottom: 2rem; opacity: 0.8;
+            max-width: 520px; margin-left: auto; margin-right: auto;
         }
 
         .contact-email {
-            display: inline-block;
-            font-size: 1.2rem;
-            color: #60a5fa;
-            text-decoration: none;
-            font-weight: 600;
-            border-bottom: 2px solid transparent;
-            transition: border-color 0.2s;
+            display: inline-block; font-size: 1.2rem;
+            color: #60a5fa; text-decoration: none; font-weight: 600;
+            border-bottom: 2px solid transparent; transition: border-color 0.2s;
         }
-
         .contact-email:hover { border-color: #60a5fa; }
 
         /* ── Footer ── */
         footer {
-            padding: 1.5rem 0;
-            text-align: center;
-            background: #0f172a;
-            color: #475569;
-            font-size: 0.85rem;
+            padding: 1.5rem 0; text-align: center;
+            background: #0f172a; color: #475569; font-size: 0.85rem;
         }
-
         footer a { color: #64748b; text-decoration: none; }
         footer a:hover { color: #94a3b8; }
 
         /* ── Responsive ── */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.1rem; }
+            .product-title-wordmark { font-size: 2.25rem; }
             .section-title { font-size: 1.65rem; }
             .two-col { grid-template-columns: 1fr; }
             .product-grid { grid-template-columns: 1fr; }
@@ -566,6 +403,7 @@
             nav { display: none; }
             .cta-buttons { flex-direction: column; align-items: center; }
             .btn { width: 100%; max-width: 300px; text-align: center; }
+            .stack-names { gap: 0.5rem; }
         }
     </style>
 </head>
@@ -576,7 +414,6 @@
     <div class="container">
         <div class="header-inner">
             <a href="#" class="logo-section">
-                <!-- Pais waypoints logo (inline SVG, no external file needed) -->
                 <svg class="logo-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                     <path d="M 20 180 Q 109 157, 100 100 Q 91 43, 180 20"
                           fill="none" stroke="#E8EAED" stroke-width="6" stroke-linecap="round"/>
@@ -639,7 +476,10 @@
 <section class="product" id="product">
     <div class="container">
         <div class="section-label">The Product</div>
-        <h2 class="section-title">Pais</h2>
+        <!-- Pais wordmark as the section title -->
+        <span class="product-title-wordmark">
+            <span class="pais-p">P</span><span class="pais-a">a</span><span class="pais-i">i</span><span class="pais-s">s</span>
+        </span>
         <p class="section-subtitle">Personal AI orchestration for the agentic era</p>
 
         <div class="product-grid">
@@ -676,13 +516,12 @@
                         </svg>
                     </div>
                     <div>
-                        <span class="chat-title">
+                        <span class="chat-name">
                             <span class="pais-p">P</span><span class="pais-a">a</span><span class="pais-i">i</span><span class="pais-s">s</span>
                         </span>
                         <span class="chat-status">Active</span>
                     </div>
                 </div>
-
                 <div class="chat-bubble chat-user">Add my dentist appointment - Tuesday at 2pm, Dr. Chen on Main St</div>
                 <div class="chat-bubble chat-pais">
                     Got it. I've prepared this for your calendar:
@@ -709,14 +548,16 @@
 <!-- Tech Stack -->
 <section class="stack">
     <div class="container">
-        <div class="stack-label" style="color:#475569;">Built entirely on Google's stack</div>
-        <div class="stack-logos">
-            <!--
-                logos-stack.svg is your screenshot of the Gemini, Firebase, Vertex AI,
-                and MCP logos against a black background. It displays here full-width
-                against the matching black section background.
-            -->
-            <img src="logos-stack.svg" alt="Gemini, Firebase, Vertex AI, MCP" class="logos-strip">
+        <div class="stack-label">Built entirely on Google's stack</div>
+        <div class="logos-strip-wrap">
+            <img src="logos-stack.png" alt="Gemini, Firebase, Vertex AI, MCP" class="logos-strip">
+        </div>
+        <!-- Component name labels aligned under each logo -->
+        <div class="stack-names">
+            <span class="stack-name">Gemini 2.5</span>
+            <span class="stack-name">Firebase</span>
+            <span class="stack-name">Vertex AI</span>
+            <span class="stack-name">MCP / A2A</span>
         </div>
     </div>
 </section>
@@ -748,12 +589,12 @@
                         <div class="team-role">Founder &amp; CEO</div>
                     </div>
                 </div>
-                <p>Marcilla brings a rare combination of technology, human services, and AI/ML expertise to Pais. Her background in IT, behavioral health systems, and direct work with the Swarbrick whole-life wellness framework - the academic foundation of Pais's 8-category classification system - gives the product an authenticity that enterprise AI cannot replicate.</p>
-                <p>The normative layer at Pais's core didn't come from a product requirement. It came from lived and professional experience understanding how people actually organize their lives.</p>
+                <p>Marcilla wrote her first software application while still in elementary school because the video game she wanted to play wasn't ported to her system. That same spirit drove her to envision and eventually develop Pais in response to "everything" apps built on extraction models, rather than built to nourish human flourishing.</p>
+                <p>Her background includes not only technology operations, but also a lived experience of recovery which she transferred to a career in human services as an award-winning peer support specialist. With her understanding of finding balance in a life well-lived and her desire for an alternative to the toxicity in current superapps, she achieved certification in SQL, Python, cybersecurity, and AI before beginning work on Pais. As a result, Pais is the personal digital assistant conceived and built from the ground up to be human-centered.</p>
                 <div class="credentials">
                     <span class="cred-tag">CompTIA Security+</span>
                     <span class="cred-tag">NC State AI/ML Academy</span>
-                    <span class="cred-tag">IT &amp; Human Services</span>
+                    <span class="cred-tag">Tech Ops &amp; Human Services</span>
                     <span class="cred-tag">US Army Captain</span>
                     <span class="cred-tag">Swarbrick Framework</span>
                 </div>
@@ -777,7 +618,7 @@
                         <div class="team-role">Technical Co-Founder</div>
                     </div>
                 </div>
-                <p>Jerry is the engineer who took Pais from prototype to working product. Where a foundation existed, he built the infrastructure that made it real - the two-stage Gemini pipeline, Firebase architecture, and event extraction system at the core of Phase 1.</p>
+                <p>Jerry is the engineer who took a working prototype and fundamentally redesigned it into a production-ready system. He rebuilt the two-stage Gemini pipeline, rearchitected the Firebase infrastructure, and overhauled the event extraction system that powers Phase 1 - bringing the kind of disciplined engineering judgment that turns "it mostly works" into something you can actually ship.</p>
                 <p>His PhD in neuropsychology and 17 years in medical device R&D at Electrical Geodesics, Inc. aren't background details. The cognitive science that shaped his research career directly informs how Pais reasons about time, priority, and coordination across the different domains of a person's life.</p>
                 <div class="credentials">
                     <span class="cred-tag">PhD Neuropsychology</span>
